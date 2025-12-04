@@ -34,7 +34,7 @@ This document describes the default flow for proposing, reviewing, and deploying
 - GitHub Actions workflow: `.github/workflows/ci.yml`.
 - Triggers on every push to `main` and all pull requests targeting `main`.
 - Steps:
-  1. Install dependencies with `npm ci`.
+  1. Install dependencies with `npm install` (hackathon workaround for `picomatch` lock conflict).
   2. Run `npm run lint`.
   3. Run `npm run build`.
 - PRs must be green before merging. If the workflow fails, fix the issue locally, push again, and re-run the checks.
