@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aaber
+
+Aaber is a smart digital platform that allows any citizen to send official, authenticated messages directly to national leadership and government entities. The goal is to replace complicated, slow, and unclear communication channels with a simple, safe, and modern solution.
+
+## Overview
+
+- **Audience-first:** Citizens can reach decision makers without navigating fragmented bureaucratic processes.
+- **Trust & authenticity:** Every submission is verified to ensure messages are secure, traceable, and tamper-resistant.
+- **Modern experience:** A streamlined interface shortens response cycles and gives senders clarity on their requests.
+
+## Tech Stack
+
+- Next.js 15 (App Router)
+- React 18
+- Tailwind CSS 3
+- TypeScript 5
+- ESLint (Next.js Core Web Vitals config)
 
 ## Getting Started
 
-First, run the development server:
+### Requirements
+
+- Node.js 18+ and npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) to view the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+### Linting
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+app/            # App Router pages, layouts, and routes
+public/         # Static assets (favicon, images, etc.)
+app/globals.css # Global styles and Tailwind layers
+tailwind.config.ts
+postcss.config.mjs
+docs/           # Project docs (workflow, specs, etc.)
+```
 
-## Deploy on Vercel
+## Workflow
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The collaboration and deployment workflow lives in `docs/workflow.md`. Review it before starting new work so branches, commits, and PRs stay consistent.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Roadmap
+
+- Design the authenticated messaging flow.
+- Integrate identity verification and audit logging.
+- Build dashboards for leadership and agencies to track responses.
+
+## License
+
+This project is currently private; licensing will be defined when the platform is launched publicly.
