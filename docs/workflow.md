@@ -29,6 +29,16 @@ This document describes the default flow for proposing, reviewing, and deploying
 8. **Push**: `git push -u origin <branch-name>`.
 9. **Open PR**: Fill out the template (see checklist below) and request review.
 
+## Continuous Integration
+
+- GitHub Actions workflow: `.github/workflows/ci.yml`.
+- Triggers on every push to `main` and all pull requests targeting `main`.
+- Steps:
+  1. Install dependencies with `npm ci`.
+  2. Run `npm run lint`.
+  3. Run `npm run build`.
+- PRs must be green before merging. If the workflow fails, fix the issue locally, push again, and re-run the checks.
+
 ## Pull Request Checklist
 
 - Purpose and context are explained (screenshots or videos when UI changes are visible).
